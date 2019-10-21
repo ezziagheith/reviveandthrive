@@ -36,4 +36,8 @@ app.use(session({
 // Html routes
 app.use('/', routes.views);
 
+// API routes
+app.use('/api/v1', routes.api);
+
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
