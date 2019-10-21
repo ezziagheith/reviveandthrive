@@ -76,6 +76,20 @@ const createSession = (req, res) => {
     })
 }
 
+// Delete session -- logout 
+
+const deleteSession = (req, res) => {
+    req.session.destroy(err => {
+        if (err) return res.status(500).json({
+            status: 500,
+            error: [{message: 'Uh oh, something went wrong. Please try again'}]});
+
+        res.status(200).json({
+            status: 200,
+            message: 'Succes',
+        });
+    });
+}
 
 
 
@@ -84,4 +98,5 @@ const createSession = (req, res) => {
 module.exports = {
     createUser,
     createSession,
+    deleteSession,
 }
