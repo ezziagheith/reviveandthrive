@@ -30,4 +30,10 @@ app.use(session({
 }))
 
 
+
+// =================== End Points =================//
+
+// Html routes
+app.use('/', routes.views);
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
