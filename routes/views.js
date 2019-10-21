@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const ctrl = require('../controllers');
 
 
 
-// ======== Home =============//
+// ======== Routes =============//
 
+// Home route
 router.get('/', (req, res) => {
   res.sendFile('views/index.html', {
     root: `${__dirname}/../`
@@ -13,7 +15,7 @@ router.get('/', (req, res) => {
 
 //signup route
 router.get('/signup', (req, res) => {
-  res.sendFile('views/signup.html', {
+  res.sendFile('views/sign-up.html', {
     root: `${__dirname}/../`
   });
 });
@@ -21,14 +23,14 @@ router.get('/signup', (req, res) => {
 
 // Login route
 router.get('/login', (req, res) => {
-  res.sendFile('views/login.html', {
+  res.sendFile('views/log-in.html', {
     root: `${__dirname}/../`
   });
 });
 
 // events route
 router.get('/events', (req, res) => {
-  res.sendFile('views/signup.html', {
+  res.sendFile('views/event.html', {
     root: `${__dirname}/../`
   });
 });
