@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-
+const db = require('./models');
 
 // Server Port 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
 
 // Server App
 const app = express();
