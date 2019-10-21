@@ -24,9 +24,9 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.use(session({
-  secret: 'Sssshhhhhh, this is a secret....',
-  resave: false, // save session on every request
-  saveUninitialized: false, // Only save session if session exists on req object.
+  secret: 'This is a secret....',
+  resave: false, 
+  saveUninitialized: false, 
 }))
 
 
