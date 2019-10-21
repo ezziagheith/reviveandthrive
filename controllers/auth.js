@@ -106,7 +106,16 @@ const verifyAuth = (req, res) => {
     });
 }
 
+// GET Show Profile
 
+const showAccount = (req, res) =>{
+    db.User.findById(req.params.userId, (err, foundAccount) =>{
+        if (err) return res.status(500).json({
+            status: 500,
+            error: [{message: 'Uh oh, something went wrong. Please try again'}],
+        });
+    });
+};
 
 
 
@@ -117,4 +126,5 @@ module.exports = {
     createSession,
     deleteSession,
     verifyAuth,
+    showAccount,
 }
