@@ -21,7 +21,6 @@ onSuccess = (response) => {
     console.log('success!');
   
     response.data.forEach((events) => {
-      console.log(events);
         const template = `
       <table>
         <td>
