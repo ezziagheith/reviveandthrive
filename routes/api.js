@@ -16,4 +16,10 @@ router.get('/verify', ctrl.auth.verifyAuth);
 router.get('/account/:userId', ctrl.auth.showAccount);
 
 
+
+
+// ================ Admin routes ==================//
+router.get('/events', ctrl.event.showEvent);
+router.post('/events', ctrl.event.createEvent);
+
 module.exports = router;
