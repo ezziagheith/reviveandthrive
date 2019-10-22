@@ -15,14 +15,37 @@ $('#login').on('click', function (event){
 
 
 
-
-// NOTE Calendar
-// used thid resource to create the calander(https://designmodo.com/calendar-jquery-css3/);
-$('#calendar').datepicker({
-    inline: true,
-    firstDay: 1,
-    showOtherMonths: true,
-    dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
-});
-
+$('.details')
+// NOTE EVents
+onSuccess = (response) => {
+    console.log('success!');
+  
+    response.data.forEach((events) => {
+      const template = `
+      <table>
+        <td>
+            <em>${events.time}</em>
+            <h5>${events.className}</h5>
+            <p>${events.teacherNmae}</p> 
+        <section class="details">
+            <small>Click for Details</small>
+            <p class="hide">${events.description}</p>     
+        </section>
+        </td>
+        </table>
+      `;
+      $('#events').append(template);
+    })
+  };
+  
+  onError = () => {
+    console.log('err');
+  }
+  
+  $.ajax({
+    method: "GET",
+    url: "http://localhost:3000/api/v1/events",
+    success: onSuccess,
+    error: onError
+  })
 
