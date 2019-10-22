@@ -2,6 +2,25 @@ const bcrypt = require ('bcryptjs');
 
 const db = require('../models');
 
+// Show all users
+const showUsers = (req, res) => {
+    db.User.find({}, (err, allUsers) => {
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
+      
+      res.json({
+        status: 200,
+        count: allUsers.length,
+        data: allUsers,
+        requestedAt: new Date().toLocaleString(),
+      });
+    });
+  };
+
+
+
 // POST Create User
 
 const createUser = (req, res) => {
@@ -28,6 +47,7 @@ const createUser = (req, res) => {
             };
 
             db.User.create(newUser, (err, createdUser) =>{
+                console.log(createdUser);
                 if (err) return res.status(500).json({
                     status: 500,
                     error: [{message: 'Uh oh, something went wrong. Please try again'}]
@@ -35,6 +55,7 @@ const createUser = (req, res) => {
 
                 res.status(201).json({
                     status: 201,
+                    data: createdUser,
                 });
             });
         });
@@ -122,6 +143,7 @@ const showAccount = (req, res) =>{
 
 
 module.exports = {
+    showUsers,
     createUser,
     createSession,
     deleteSession,

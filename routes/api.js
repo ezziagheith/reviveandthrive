@@ -13,6 +13,7 @@ router.get('/verify', ctrl.auth.verifyAuth);
 
 
 // ============== User Account =============== //
+router.get('/users', ctrl.auth.showUsers);
 router.get('/account/:userId', ctrl.auth.showAccount);
 
 
