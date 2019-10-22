@@ -122,6 +122,24 @@ main{
     padding-bottom: 15px;
 }
 
+.foot{
+    background-color: #008046;
+    color: white;
+}
+
+.contact-us{
+    padding: 10px;
+}
+
+.about-us{
+    padding: 10px;
+}
+
+.icon{
+    padding: 5px;
+    float: right;
+}
+
 /* Sign Up Page*/
 
 .signuppg{
@@ -144,4 +162,18 @@ main{
 .btn-primary:hover{
     background-color: #008046;
     border-color: #008046;
+}
+
+.form-label-group{
+    padding: 10px;
+}
+
+/* Log In Page*/
+
+.loginn{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background-image: url("../assets/letstry.jpg");
+    background-size: cover;
 }
