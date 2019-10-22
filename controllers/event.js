@@ -50,6 +50,10 @@ const createEvent = (req, res) => {
   };
 
 
+  
+  // const getEvent = () => {
+  //   fetch(`/api/v1/events/${id}`, )   
+  //  }
 
 module.exports = {
  showEvent,
