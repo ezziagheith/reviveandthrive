@@ -16,9 +16,32 @@
     <!----------JS------------>
     <script defer src="/js/app.js"></script>
     <title>Revive and Thrive</title>
-    
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/floating-labels/">
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="floating-labels.css" rel="stylesheet">
 </head>
-<body>
+<body class="loginn">
     <!--START NAV-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navv">
         <a class="navbar-brand" id="revive" href="/">Revive and Thrive</a>
@@ -40,17 +63,38 @@
             </li>
             </ul>
 
-            <div class="account-item">
-                    <a class="account-link" href="#">Events</a>
-                    </div>
-            <div class="account-item">
-            <a class="account-link" href="#">My Account</a>
-            </div>
 
-            <button class="btn btn-outline-success my-2 my-sm-0 butt" id="login" type="submit">Log In</button>
-        </div>
         </nav>
     <!--END NAV---->
+
+
+    <main>
+            <form class="form-signin">
+                    <div class="text-center mb-4">
+                      <img class="mb-4" src="/docs/4.3/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+                      <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+                      <p class="revive1">Login to head over to your account page</p>
+                    </div>
+                  
+                    <div class="form-label-group">
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+                    </div>
+                  
+                    <div class="form-label-group">
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+                    </div>
+                  
+                    <div class="checkbox mb-3">
+                      <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                      </label>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+                    
+                  </form>
+    </main>
 
 
     <!--------BOOTSTRAP JS------------->
