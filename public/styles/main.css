@@ -53,10 +53,20 @@ header {
   
 .butt{
     margin-right: 7px;
+    color: #13E8E1;
+    border-color: #13E8E1;
 }
 
 a{
     text-decoration: none;
     background-color: transparent;
     color: #13E8E1;
+}
+
+#revive{
+    color: #13E8E1;
+}
+
+.navv{
+    background-color: transparent !important;
 }
