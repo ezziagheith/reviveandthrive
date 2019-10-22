@@ -57,18 +57,18 @@ header {
   
 .butt{
     margin-right: 7px;
-    color: #13E8E1;
-    border-color: #13E8E1;
+    color: #00AF46;
+    border-color: #00AF46;
 }
 
 a{
     text-decoration: none;
     background-color: transparent;
-    color: #13E8E1;
+    color: #00AF46;
 }
 
 #revive{
-    color: #13E8E1;
+    color: #00AF46;
 }
 
 .navv{
@@ -85,7 +85,7 @@ a{
 }
 
 .featurette-heading{
-    color: #13E8E1;
+    color: #008046;
 }
 
 #signup:hover{
@@ -98,8 +98,8 @@ a{
 
 
 .btn-outline-success {
-    color: #13E8E1 !important;
-    border-color: #13E8E1 !important;
+    color: #00AF46 !important;
+    border-color: #00AF46 !important;
 }
 
 .mission{
@@ -120,4 +120,28 @@ main{
 
 .carousel-indicators{
     padding-bottom: 15px;
+}
+
+/* Sign Up Page*/
+
+.signuppg{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background-image: url("../assets/letstry.jpg");
+    background-size: cover;
+}
+
+.revive1{
+    color: #008046 !important;
+}
+
+.btn-primary{
+    background-color: #008046;
+    border-color: #008046;
+}
+
+.btn-primary:hover{
+    background-color: #008046;
+    border-color: #008046;
 }
