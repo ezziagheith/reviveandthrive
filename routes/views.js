@@ -43,4 +43,11 @@ router.get('/account', (req, res) => {
 });
 
 
+// Admin route
+router.get('/admin', (req, res) => {
+  res.sendFile('views/admin.html', {
+    root: `${__dirname}/../`
+  });
+});
+
 module.exports = router;
