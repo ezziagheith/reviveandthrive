@@ -40,25 +40,9 @@ const handleSubmit = (event) => {
         if(res.status === 201) return  window.location.href="http://localhost:3000/login"
     })
       .catch((err) => console.log(err));
-  }
-  //   // handle login
-  // if (form.id === 'login' && formIsValid) {
-  //   console.log('Submitting user login --> ', userData);
-  //   fetch('/api/v1/login', {
-  //     method: 'POST',
-  //     credentials: 'include',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(userData)
-  //   })
-  //     .then(dataStream => dataStream.json())
-  //     .then(res => {
-  //       console.log(res);
-  //       if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data.id}`;
-  //     })
-  //     .catch(err => console.log(err));
- }
+  };
+ };
+
   
 
 

@@ -29,22 +29,9 @@ const getAccount = (req, res) =>{
 }
 
 
-// get one account
-const getAccount = (req, res) =>{
-  db.User.findById(req.params.id, (err, foundAccount) =>{
-      if (err) return res.status(500).json({
-          status: 500,
-          data: foundAccount,
-          error: [{message: 'Something went wrong. Please try again'}],
-      });
-  });
-};
 
 module.exports = {
   showAccount,
   getAccount,
-<<<<<<< HEAD
-=======
   
->>>>>>> submaster
 }
