@@ -3,20 +3,14 @@ body{
   background-size: cover;
 }
 
-
-
 main{
   padding: 100px;
   margin-top: 15px;
 }
 
 
-section{
-  background-color: rgba(0, 0, 0, 0.4);
-}
 
-.table td, .table th {
-  padding: .75rem;
-  vertical-align: middle;
-  border-top: 1px solid #dee2e6
-};
+
+span.add{
+  float: right;
+}

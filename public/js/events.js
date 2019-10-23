@@ -4,18 +4,19 @@ onSuccess = (response) => {
  
   response.data.forEach((events) => {
       const template = `
-    <tr class="cards">
-          <td>${events.time}</td>
-          <td>${events.className}</td>
-          <td>${events.teacherName}</td> 
-          <spam class="add"><button type="button" class="btn btn-link">add</button></spam>
-          <button type="button" class="btn btn-link">Click for details</button>
-          <td id="show">${events.description}</td>     
-      </tr>
+    <div class="section-info">
+    <span>${events.time}</span>
+          <span class="add"><button type="button" class="btn btn-link">add</button></span>
+          <h5>${events.className}</h5>
+          <p>${events.teacherName}</p> 
+      <section id="details">
+      <button type="button" class="btn btn-link">Click for details</button>
+          <p id="show">${events.description}</p>     
+      </section>
+      </div>
     `;
     
-    console.log($('tbody').append(template));
-
+    $('#post').append(template);
 
   })
 };
