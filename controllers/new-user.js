@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 const db = require('../models');
 
 
@@ -31,7 +32,28 @@ const createUser = (req, res) => {
           error: [{message: 'Invalid Request. Please try again'}]
       });
      
-        db.User.create(req.body, (err, createdUser) =>{
+      // us bcrypt
+      bcrypt.genSalt(10, (err, salt) => {
+        if (err) return res.status(500).json({
+          status: 500,
+          error: [{message: 'Something went wrong. Please try again'}],
+        });
+
+
+        bcrypt.hash(req.body.password, salt, (err, hash) => {
+          if (err) return res.status(500).json({
+            status: 500,
+            error: [{message: 'Something went wrong. Please try again'}],
+          })
+
+
+          const newUser = {
+            firstName: req.body.firstName,
+            email: req.body.email,
+            password: hash,
+          }
+    
+            db.User.create(newUser, (err, createdUser) =>{
               if (err) return res.status(500).json({
                   status: 500,
                   error: [{message: 'Something went wrong. Please try again'}]
@@ -44,7 +66,9 @@ const createUser = (req, res) => {
                   requestedAt: new Date().toLocaleString(),
               });
           });
+        });
       });
+    });
   };
 
 module.exports = {
