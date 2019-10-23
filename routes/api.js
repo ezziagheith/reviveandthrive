@@ -9,11 +9,17 @@ const ctrl = require('../controllers');
 
 router.get('/users', ctrl.newUser.showUsers);
 router.post('/signup', ctrl.newUser.createUser);
-// router.get('/account/:userId', ctrl.newUser.showAccount);
+router.post('/login', ctrl.auth.createSession);
+//router.get('/account/:id', ctrl.newUser.getAccount);
 
+<<<<<<< HEAD
 router.get('/account', ctrl.account.showAccount);
 router.post('/account', ctrl.newUser.createSession);
 router.get('/account/:id', ctrl.account.getAccount);
+=======
+router.get('/account/:id', ctrl.account.showAccount);
+
+>>>>>>> submaster
 
 
 // ================ Admin routes ==================//
