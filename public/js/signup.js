@@ -1,7 +1,6 @@
 console.log('Signup JS');
 
 const form = document.querySelector('form');
-console.log(form)
 
 const handleSubmit = (event) => {
   event.preventDefault();
@@ -18,7 +17,7 @@ const handleSubmit = (event) => {
     alert('Passwords do not match');
   } else {
     const userData = {
-      name: firstName.value,
+      firstName: firstName.value,
       lastName: lastname.value,
       email: email.value,
       password: password.value,
