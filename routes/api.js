@@ -12,7 +12,8 @@ router.post('/signup', ctrl.newUser.createUser);
 // router.get('/account/:userId', ctrl.newUser.showAccount);
 
 router.get('/account', ctrl.account.showAccount);
-
+router.post('/account', ctrl.newUser.createSession);
+router.get('/account/:id', ctrl.account.getAccount);
 
 
 // ================ Admin routes ==================//
