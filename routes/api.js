@@ -11,7 +11,7 @@ router.get('/users', ctrl.newUser.showUsers);
 router.post('/signup', ctrl.newUser.createUser);
 // router.get('/account/:userId', ctrl.newUser.showAccount);
 
-
+router.get('/account', ctrl.account.showAccount);
 
 
 
