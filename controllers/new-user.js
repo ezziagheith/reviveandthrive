@@ -1,9 +1,9 @@
-const bcrypt = require ('bcryptjs');
 const db = require('../models');
 
 
-const showEvent = (req, res) => {
-  db.Event.find({}, (err, allEvent) => {
+// show all user
+const showUsers = (req, res) => {
+  db.User.find({}, (err, allUser) => {
     if (err)  return res.status(500).json({
       status: 500,
       error: [{message: 'Something went wrong! Please try again'}],
@@ -11,29 +11,27 @@ const showEvent = (req, res) => {
     
     res.json({
       status: 200,
-      count: allEvent.length,
-      data: allEvent,
+      count: allUser.length,
+      data: allUser,
       requestedAt: new Date().toLocaleString(),
     });
   });
 };
 
-
-
-
-const createEvent = (req, res) => {
-  db.Event.findOne(req.body, (err, foundEvent) =>{
+// Create User
+const createUser = (req, res) => {
+  db.User.findOne(req.body, (err, foundUser) =>{
       if (err) return res.status(500).json({
           status: 500,
           error: [{message: 'Something went wrong! Please try again'}],
       });
 
-      if (foundEvent) return res.status(400).json({
+      if (foundUser) return res.status(400).json({
           status: 400,
           error: [{message: 'Invalid Request. Please try again'}]
       });
      
-        db.Event.create(req.body, (err, createdEvent) =>{
+        db.User.create(req.body, (err, createdUser) =>{
               if (err) return res.status(500).json({
                   status: 500,
                   error: [{message: 'Something went wrong. Please try again'}]
@@ -42,15 +40,14 @@ const createEvent = (req, res) => {
               res.status(201).json({
                   status: 201,
                   count: 1,
-                  data: createdEvent,
+                  data: createdUser,
                   requestedAt: new Date().toLocaleString(),
               });
           });
       });
   };
 
-
 module.exports = {
- showEvent,
- createEvent,
+  showUsers,
+  createUser,
 }
