@@ -6,7 +6,10 @@ const UserSchema = new Schema ({
     lastName: String,
     email: String,
     password: String,
-    events: [{String}],
+    events: [{
+        type: Schema.Types.ObjectId,
+       ref: 'Event',
+    }],
 });
 
 
