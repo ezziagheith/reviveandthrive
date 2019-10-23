@@ -16,7 +16,7 @@ onSuccess = (response) => {
       </div>
     `;
     
-    $('#post').append(template);
+    // $('#post').append(template);
 
   })
 };
