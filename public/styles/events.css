@@ -3,14 +3,13 @@ body{
   background-size: cover;
 }
 
-
-
 main{
   padding: 100px;
   margin-top: 15px;
 }
 
 
+<<<<<<< HEAD
 section{
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -22,3 +21,5 @@ section{
 };
 
 
+=======
+>>>>>>> submaster

@@ -107,8 +107,27 @@ const createUser = (req, res) => {
     })
   }
 
+
+
+// Update user
+const updateUser = (req, res) => {
+  db.User.findByIdAndUpdate(
+    req.paramas.id,
+    req.body,
+    {new: true}, (error, updatedUser) => {
+      if (error) return console.log(error);
+
+      res.json({
+        status: 200,
+        count: 1,
+        data: updatedUser,
+        requestedAt: new Date().toLocaleString()
+      });
+    });
+}
 module.exports = {
   showUsers,
   createUser,
   createSession,
+  updateUser,
 }
