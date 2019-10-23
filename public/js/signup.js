@@ -14,7 +14,7 @@ const handleSubmit = (event) => {
   const password2 = document.getElementById('inputPassword2');
  
   
-  if (password.value !== password2.value) {
+   if (password.value !== password2.value) {
     alert('Passwords do not match');
   } else {
     const userData = {
@@ -22,7 +22,8 @@ const handleSubmit = (event) => {
       lastName: lastname.value,
       email: email.value,
       password: password.value,
-    };
+  };
+
 
     console.log('Submitting new user -->', userData);
 
@@ -40,26 +41,25 @@ const handleSubmit = (event) => {
     })
       .catch((err) => console.log(err));
   }
-    // handle login
-  if (form.id === 'login' && formIsValid) {
-    console.log('Submitting user login --> ', userData);
-    fetch('/api/v1/login', {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(userData)
-    })
-      .then(dataStream => dataStream.json())
-      .then(res => {
-        console.log(res);
-        if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data._id}`;
-      })
-      .catch(err => console.log(err));
-  }
+  //   // handle login
+  // if (form.id === 'login' && formIsValid) {
+  //   console.log('Submitting user login --> ', userData);
+  //   fetch('/api/v1/login', {
+  //     method: 'POST',
+  //     credentials: 'include',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(userData)
+  //   })
+  //     .then(dataStream => dataStream.json())
+  //     .then(res => {
+  //       console.log(res);
+  //       if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data.id}`;
+  //     })
+  //     .catch(err => console.log(err));
+ }
   
 
-};
 
 form.addEventListener('submit', handleSubmit);

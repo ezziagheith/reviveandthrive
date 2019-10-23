@@ -36,7 +36,7 @@ router.get('/events', (req, res) => {
 });
 
 // User account
-router.get('/account', (req, res) => {
+router.get('/account/:id', (req, res) => {
   res.sendFile('views/account.html', {
     root: `${__dirname}/../`
   });
