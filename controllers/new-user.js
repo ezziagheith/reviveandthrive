@@ -4,7 +4,7 @@ const db = require('../models');
 
 // show all user
 const showUsers = (req, res) => {
-  db.User.find({}, (err, allUser) => {
+  db.User.find({}, (err, allUsers) => {
     if (err)  return res.status(500).json({
       status: 500,
       error: [{message: 'Something went wrong! Please try again'}],
@@ -12,7 +12,7 @@ const showUsers = (req, res) => {
     
     res.json({
       status: 200,
-      count: allUser.length,
+      count: allUsers.length,
       data: allUser,
       requestedAt: new Date().toLocaleString(),
     });
@@ -71,7 +71,44 @@ const createUser = (req, res) => {
     });
   };
 
+
+  // Post Login
+
+  const createSession = (req, res) => {
+    db.User.findOne({email: req.body.email}, (err, foundUser) =>{
+        if (err) return res.status(500).json({
+            status: 500,
+            error: [{ message: 'Uh oh something went wrong. Please try again'}],
+        });
+  
+        if(!foundUser) return res.status(400).json({
+            status: 400,
+            error: [{message: 'Username or password is incorrect'}],
+        });
+        bcrypt.compare(req.body.password, foundUser.password, (err, isMatch) => {
+            if (err) return res.status(500).json({
+                status: 500,
+                error: [{message: 'Uh oh, something went wrong. Please try again'}],
+            });
+  
+            if (isMatch) {
+                req.session.currentUser = foundUser._id;
+                return res.status(201).json({
+                    status: 201,
+                    data: {id: foundUser._id},
+                });
+            } else {
+                return res.status(400).json({
+                    status: 400,
+                    error: [{message: 'Username or password is incorrect'}],
+                })
+            }
+        })
+    })
+  }
+
 module.exports = {
   showUsers,
   createUser,
+  createSession,
 }

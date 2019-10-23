@@ -54,7 +54,7 @@ const handleSubmit = (event) => {
       .then(dataStream => dataStream.json())
       .then(res => {
         console.log(res);
-        if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data.id}`;
+        if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data._id}`;
       })
       .catch(err => console.log(err));
   }
