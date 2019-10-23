@@ -1,3 +1,4 @@
-
-// $('#hello').append(`${winddow.sessionStorage.firstName}`)
-
+$(document).ready( () => {
+    $('#hello').append(` ${window.sessionStorage.firstName}`)
+})
+ 

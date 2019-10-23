@@ -12,10 +12,10 @@ const handleSubmit = (event) => {
       const userData = {
         email: email.value,
         password: password.value,
+
     };
+
   
-  
-    
       // handle login
     if (formIsValid) {
       console.log('Submitting user login --> ', userData);
@@ -32,12 +32,13 @@ const handleSubmit = (event) => {
           console.log(res);
           if (res.status === 201) {
             window.sessionStorage.setItem(`userId`, `${res.data.id}`);
-            window.sessionStorage.setItem(`firstName`, `${userData.firstName}`);
+            window.sessionStorage.setItem(`firstName`, `${res.data.firstName}`);
             return window.location.href=`http://localhost:3000/account/${res.data.id}`;
         }})
         .catch(err => console.log(err));
     }
      
 }
+
   
   form.addEventListener('submit', handleSubmit);
