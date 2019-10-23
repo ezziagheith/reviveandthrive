@@ -13,7 +13,7 @@ const showUsers = (req, res) => {
     res.json({
       status: 200,
       count: allUsers.length,
-      data: allUser,
+      data: allUsers,
       requestedAt: new Date().toLocaleString(),
     });
   });
