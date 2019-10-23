@@ -9,14 +9,7 @@ const handleSubmit = (event) => {
     const email = document.getElementById('inputEmail');
     const password = document.getElementById('inputPassword');
  
-   
-    
-    // if (password.value !== password2.value) {
-    //   alert('Passwords do not match');
-    // } else {
       const userData = {
-        // firstName: firstName.value,
-        // lastName: lastname.value,
         email: email.value,
         password: password.value,
     };
