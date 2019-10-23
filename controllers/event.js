@@ -51,7 +51,7 @@ const createEvent = (req, res) => {
 
   const updateEvent = (req, res) => {
     db.Event.findByIdAndUpdate(
-      req.paramas.id,
+      req.params.id,
       req.body,
       {new: true}, (error, updatedEvent) => {
         if (error) return console.log(error);

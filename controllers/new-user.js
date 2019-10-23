@@ -112,7 +112,7 @@ const createUser = (req, res) => {
 // Update user
 const updateUser = (req, res) => {
   db.User.findByIdAndUpdate(
-    req.paramas.id,
+    req.params.id,
     req.body,
     {new: true}, (error, updatedUser) => {
       if (error) return console.log(error);
@@ -125,6 +125,7 @@ const updateUser = (req, res) => {
       });
     });
 }
+
 module.exports = {
   showUsers,
   createUser,
