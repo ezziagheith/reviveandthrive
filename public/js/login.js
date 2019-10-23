@@ -30,11 +30,14 @@ const handleSubmit = (event) => {
         .then(dataStream => dataStream.json())
         .then(res => {
           console.log(res);
-          if (res.status === 201) return window.location.href=`http://localhost:3000/account/${res.data.id}`;
-        })
+          if (res.status === 201) {
+            window.sessionStorage.setItem(`userId`, `${res.data.id}`);
+            window.sessionStorage.setItem(`firstName`, `${userData.firstName}`);
+            return window.location.href=`http://localhost:3000/account/${res.data.id}`;
+        }})
         .catch(err => console.log(err));
     }
-    
+     
 }
   
   form.addEventListener('submit', handleSubmit);
