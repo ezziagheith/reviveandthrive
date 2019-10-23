@@ -5,16 +5,12 @@ const ctrl = require('../controllers');
 
 
 // routes controllers
-router.post('/signup', ctrl.auth.createUser);
-router.post('/login', ctrl.auth.createSession);
-router.delete('/logout', ctrl.auth.deleteSession);
-router.get('/verify', ctrl.auth.verifyAuth);
-
-
-
 // ============== User Account =============== //
-router.get('/users', ctrl.auth.showUsers);
-router.get('/account/:userId', ctrl.auth.showAccount);
+
+router.get('/users', ctrl.newUser.showUsers);
+router.post('/signup', ctrl.newUser.createUser);
+// router.get('/account/:userId', ctrl.newUser.showAccount);
+
 
 
 

@@ -7,6 +7,7 @@
     <!------BOOTSTRAP CSS------>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--------MAIN CSS--------->
+    <link rel="stylesheet" href="/styles/form.css">
     <link rel="stylesheet" href="/styles/main.css">
     <!--------JQUERY---------->
     <script defer
@@ -14,30 +15,9 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
     <!----------JS------------>
-    <script defer src="/js/app.js"></script>
+    <script defer src="/js/signup.js"></script>
     <title>Revive and Thrive</title>
 
-    
-
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
 </head>
 <body class="signuppg">
     <!--START NAV-->
@@ -75,11 +55,11 @@
         </div>
 
         <div class="form-label-group">
-            <input type="firstName" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
+            <input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
         </div>
 
         <div class="form-label-group">
-            <input type="lastName" id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
+            <input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
         </div>
                 
         <div class="form-label-group">
@@ -89,7 +69,9 @@
         <div class="form-label-group">
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" required autofocus>
         </div>  
-    
+        <div class="form-label-group">
+                <input type="password" id="inputPassword2" class="form-control" placeholder="Confirm password" required autofocus>
+            </div>  
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
 
