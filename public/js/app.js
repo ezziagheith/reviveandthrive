@@ -1,9 +1,7 @@
 // ===========  Global Vars ================== //
 const form = document.querySelector('form');
-console.log(form);
+// console.log(form);
 
-
-// If form is not falsey
 // handdle form
 form && form.addEventListener('submit', (event) => {
     let formIsValid = true;
@@ -29,26 +27,8 @@ form && form.addEventListener('submit', (event) => {
         }
     });
 
-    //Handle Sign up
-
-    if(form.id === 'signup' && formIsValid){
-        console.log('Submitting new user...', userData);
-        fetch('/api/v1/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        })
-        .then(dataStream => dataStream.json())
-        .then(res =>{
-            console.log(res);
-            if(res.status === 201) return window.location ='/login';
-        })
-        .catch(err => console.log(err));
-    }
-     // Handle Login
-  if (form.id === 'login' && formIsValid) {
+    // Handle Login
+    if (form.id === 'login' && formIsValid) {
     console.log('Submitting user login... ', userData);
     fetch('/api/v1/login', {
       method: 'POST',

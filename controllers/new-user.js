@@ -1,7 +1,7 @@
 const db = require('../models');
 
 
-
+// show all user
 const showUsers = (req, res) => {
   db.User.find({}, (err, allUser) => {
     if (err)  return res.status(500).json({
@@ -18,7 +18,7 @@ const showUsers = (req, res) => {
   });
 };
 
-
+// Create User
 const createUser = (req, res) => {
   db.User.findOne(req.body, (err, foundUser) =>{
       if (err) return res.status(500).json({
