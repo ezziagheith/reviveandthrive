@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    background-image: url("../assets/letstry.jpg");
+    background-size: cover;
+}
+
+#revive{
+    color: #008046;
+}
+
+.navv{
+    background-color: transparent !important;
+}
+
+.account-link{
+    color: white;
+    padding: 10px;
+}
+
+.btn-outline-success{
+    color: white !important;
+    border-color: white !important;
+}
