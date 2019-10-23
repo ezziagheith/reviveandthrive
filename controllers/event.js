@@ -49,8 +49,23 @@ const createEvent = (req, res) => {
       });
   };
 
-
+  const updateEvent = (req, res) => {
+    db.Event.findByIdAndUpdate(
+      req.paramas.id,
+      req.body,
+      {new: true}, (error, updatedEvent) => {
+        if (error) return console.log(error);
+  
+        res.json({
+          status: 200,
+          count: 1,
+          data: updatedEvent,
+          requestedAt: new Date().toLocaleString()
+        });
+      });
+  }
 module.exports = {
  showEvent,
  createEvent,
+ updateEvent,
 }
