@@ -1,21 +1,10 @@
-
-// NOTE Handling Sign up Button
-
-$('#signup').on('click', function (event){
-    event.preventDefault()
-    window.location.href="http://localhost:3000/signup"
-});
-
-// NOTE Handling Login Button
-
-$('#login').on('click', function (event){
-    event.preventDefault()
-    window.location.href="http://localhost:3000/login"
-});
-
+// ===========  Global Vars ================== //
 const form = document.querySelector('form');
+console.log(form);
+
 
 // If form is not falsey
+// handdle form
 form && form.addEventListener('submit', (event) => {
     let formIsValid = true;
     const userData = {};
@@ -28,24 +17,23 @@ form && form.addEventListener('submit', (event) => {
             input.insertAdjacentHTML('afterend', `
             <div class='alert ${input.id}-message'> Please enter your ${input.id}</div>
             `);
-        } else if (input.type === 'password' && input.value.length < 8){
+        } else if (input.type === 'password' && input.value.length < 4){
             formIsValid = false;
             input.classList.add('input-error');
             input.insertAdjacentHTML('afterend', `
-            <div class='alert ${input.id}-message'> Password must be at least 8 characters</div>
+            <div class='alert ${input.id}-message'> Password must be at least 4 characters</div>
             `);
         }
         if (input.type !== 'submit' && formIsValid){
             userData[input.name] = input.value;
         }
     });
-    console.log(userData);
 
     //Handle Sign up
 
     if(form.id === 'signup' && formIsValid){
         console.log('Submitting new user...', userData);
-        fetch('/api/v1/users', {
+        fetch('/api/v1/signup', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -77,12 +65,25 @@ form && form.addEventListener('submit', (event) => {
       })
       .catch(err => console.log(err));
   }
-
+console.log(userData);
 });
 
 
  
+// ========================= events listeners ============================//
+// NOTE Handling Sign up Button
 
+$('#signup').on('click', function (event){
+    event.preventDefault()
+    window.location.href="http://localhost:3000/signup"
+});
+
+// NOTE Handling Login Button
+
+$('#login').on('click', function (event){
+    event.preventDefault()
+    window.location.href="http://localhost:3000/login"
+});
 
 
 
