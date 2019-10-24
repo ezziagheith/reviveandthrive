@@ -64,8 +64,27 @@ const createEvent = (req, res) => {
         });
       });
   }
+
+
+  // Destroy user
+const destroy = (req, res) => {
+  db.Event.findByIdAndDelete(
+    req.params.id, (err, destroyEvent) =>{
+      if (err) return console.log(error);
+      res.json({
+        status:200,
+        count: 1,
+        data: destroyEvent,
+        requestedAt: new Date().toLocaleString(),
+      })
+    })
+}
+
+
+
 module.exports = {
  showEvent,
  createEvent,
  updateEvent,
+ destroy,
 }

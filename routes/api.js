@@ -12,6 +12,8 @@ router.post('/signup', ctrl.newUser.createUser);
 router.post('/login', ctrl.auth.createSession);
 router.get('/account/:id', ctrl.account.showAccount);
 router.put('/users/:id', ctrl.newUser.updateUser);
+router.delete('/users/:id', ctrl.newUser.destroy);
+router.delete('/events/:id', ctrl.account.destroy);
 
 
 
