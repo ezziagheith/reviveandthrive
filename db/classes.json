@@ -1,0 +1,62 @@
+[
+  {  
+	"className": "Regueton fusion",
+	"teacherName": "Adonis Martin",
+	"time": "6:30-7:45pm",
+	"location": "Dance Mission Theater, San Francisco, CA",
+    "description":"Salsa Fusion with Adonis is devoted to her love of Cuban Dance and Music. This class centers around Salsa Suelta, a “freestyle” none partnering dance featured most often in clubs. Class begins with body alignment, isolation’s, core work and stretching followed by choreography that builds in tempo and brings together the music and basic steps of popular and folkloric dances that inform Cuban Salsa. Tika’s choreography’s move from the basics to intermediate patterns with lots of SABOR! This class is a great way to work on your style and move toward partnering in Salsa Casino Rueda and taking Cuban Folkloric classes!",
+    "date": "10/24/2019", 
+    "attendies": []
+},
+
+{
+	"className": "Hot Yoga",
+	"teacherName": "Lindsey Hiltner",
+	"time": "5:30-6:45pm",
+	"location": "Core Yoga Okland, CA",
+    "description":"Hot yoga is a vigorous form of yoga performed in a very warm and humid studio. ... During the Bikram form of hot yoga, the room is heated to approximately 105 F (40 C) and has a humidity of 40 percent. Bikram yoga is a 90-minute program that consists of a series of different standing and stretching postures.",
+    "date": "10/24/2019", 
+    "attendies": []
+},
+
+{
+	"className": "Salsa Rueda",
+	"teacherName": "Linh Tran",
+	"time": "10:30am - 12:00pm",
+	"location": "Fly Studios Okland, CA",
+    "description":"In salsa rueda, two or more couples dance salsa patterns that are directed by one of the dancers, known as the caller. The caller will call out different Cuban salsa patterns that might involve switching partners, clapping, yelling, stomping, or just about any movement your creative mind can think of.",
+    "date": "10/24/2019", 
+    "attendies": []
+},
+
+{
+	"className": "Bootcamp",
+	"teacherName": "Ali Stoltz",
+	"time": "6:30-7:45pm",
+	"location": "24 hours Fitness, CA",
+    "description":"High intensity interval training, using weights, bands, and other equiptment to help optimize fat burn and cardio output.",
+    "date": "10/24/2019", 
+    "attendies": []
+},
+
+
+{
+	"className": "Cuban Salsa",
+	"teacherName": "Izzy Flow",
+	"time": "Tuesdays, 6:30-7:45pm",
+	"location": "Core Yoga Okland, CA",
+    "description":"In salsa rueda, two or more couples dance salsa patterns that are directed by one of the dancers, known as the caller. The caller will call out different Cuban salsa patterns that might involve switching partners, clapping, yelling, stomping, or just about any movement your creative mind can think of.",
+    "date": "10/24/2019", 
+    "attendies": []
+},
+
+{
+	"className": "Core Yoga",
+	"teacherName": "Damian Quinones",
+	"time": "6:30-7:45pm",
+	"location": "Core Yoga Okland, CA",
+    "description":" During this powerful vinyasa flow class, you will breathe, focus, move, stretch and balance. Core Yoga is a heat building practice that allows you to move with your breath while building strength and working on your core. ... Yin Yoga: Yin yoga targets the body's connective tissue.",
+    "date": "10/24/2019", 
+    "attendies": []
+}
+]
