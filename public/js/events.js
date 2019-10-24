@@ -9,7 +9,7 @@ onSuccess = (response) => {
       <h6>${events.teacherName}</h6>
       <div>${events.time}</div>
       <span><button type="button" class="btn btn-link" >Add</button></span>
-      <h5 class="btn btn-link">See Description</h5>
+      <h5 class="description btn btn-link">See Description</h5>
       <p class="parrafo">${events.description}</p>
     </div>
     `;
@@ -17,9 +17,9 @@ onSuccess = (response) => {
     $('.card-container').append(template);
     
   })
-  $("p.parrafo").hide();
-  $("h5").click('section', function(){
-    $("p.parrafo").slideToggle();
+  $(".parrafo").hide();
+  $('.card-container .description').on('click', function(){
+    $('.parrafo').slideToggle();
   });
 };
 
