@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- main css -->
+  <link rel="stylesheet" href="/styles/admin.css">
+  <!-- jquery -->
+  <script defer
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script defer src="/scripts/dashboard.js"></script>
+  <script defer src="/scripts/app.js"></script>
+  <title>DASHBOARD</title>
+</head>
+<body>
+<div class="container-fluid">
+<div class="row">
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+<div class="sidebar-sticky">
+<ul class="nav flex-column">
+    <li class="nav-item">
+    <a class="nav-link active" href="#">
+        <span data-feather="home"></span>
+        Dashboard <span class="sr-only">(current)</span>
+    </a>
+    </li>
+     <li class="nav-item">
+        <a class="nav-link active" href="#">
+            <span data-feather="home"></span>Events<span class="sr-only">(current)</span>
+        </a>
+     </li>
+    </ul>
+</div>
+</nav>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    </div>
+
+    <h2>Events Info</h2>
+    <div id="dashboard" class="table-responsive">
+    <table class="table table-striped table-sm">
+        <thead id="header">
+        <tr>
+            <td>Class Name:</td>
+            <td>Teacher Name:</td>
+            <td>Time:</td>
+            <td>Location:</td>
+            <td>description:</td>
+        </tr>
+        </thead>
+      <tbody>  
+    </tbody>
+  </table>
+</body>
+</html>

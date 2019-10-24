@@ -45,7 +45,7 @@ router.get('/account/:id', (req, res) => {
 
 // Admin route
 router.get('/admin', (req, res) => {
-  res.sendFile('views/admin.html', {
+  res.sendFile('views/dasboard/admin.html', {
     root: `${__dirname}/../`
   });
 });
