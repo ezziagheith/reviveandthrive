@@ -66,7 +66,7 @@ const createEvent = (req, res) => {
   }
 
 
-  // Destroy user
+// Destroy event
 const destroy = (req, res) => {
   db.Event.findByIdAndDelete(
     req.params.id, (err, destroyEvent) =>{
