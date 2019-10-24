@@ -19,12 +19,18 @@ const showAccount = (req, res) => {
 };
 
 const getAccount = (req, res) =>{
-  db.User.findById(req.params.id, (err, foundAccount) =>{
+  db.User.findById(req.params.id)
+  .populate('events')
+  .exec((err, foundAccount) =>{
     if (err) return res.status(500).json({
       status: 500,
       data: foundAccount,
       errir: [{message: 'Something went wrong. Please try again'}],
     })
+    return res.status(200).json({
+      status: 200,
+      data: foundAccount,
+  });
   })
 }
 

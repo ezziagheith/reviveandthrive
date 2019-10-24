@@ -10,7 +10,7 @@ const ctrl = require('../controllers');
 router.get('/users', ctrl.newUser.showUsers);
 router.post('/signup', ctrl.newUser.createUser);
 router.post('/login', ctrl.auth.createSession);
-router.get('/account/:id', ctrl.account.showAccount);
+router.get('/account/:id', ctrl.account.getAccount);
 router.put('/users/:id', ctrl.newUser.updateUser);
 router.delete('/user/:id', ctrl.newUser.destroy);
 router.delete('/events/:id', ctrl.event.destroy);
