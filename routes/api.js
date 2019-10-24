@@ -15,6 +15,7 @@ router.put('/users/:id', ctrl.newUser.updateUser);
 router.delete('/user/:id', ctrl.newUser.destroy);
 router.delete('/events/:id', ctrl.event.destroy);
 router.put('/users/:id/addevent', ctrl.account.addEvent);
+router.delete('/users/event/:id', ctrl.account.destroy);
 
 
 
