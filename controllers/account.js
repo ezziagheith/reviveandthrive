@@ -28,10 +28,32 @@ const getAccount = (req, res) =>{
   })
 }
 
+const addEvent = (req,res) => {
+  const event = req.body.event;
+  db.User.findById(req.params.id, (err, foundUser) =>{
+      if (err) return res.status(500).json({
+          status: 500,
+          error: [{message: 'Uh oh, something went wrong. Please try again'}],
+      });
+      foundUser.events.push(event);
+      foundUser.save( (err, savedUser) =>{
+          if (err) return res.status(500).json({
+              status: 500,
+              error: [{message: 'Uh oh, something went wrong. Please try again'}],
+          });
+          return res.status(201).json({
+              status: 201,
+              data: savedUser,
+          });
+      })
+  });
+}
+
 
 
 module.exports = {
   showAccount,
   getAccount,
+  addEvent
   
 }
