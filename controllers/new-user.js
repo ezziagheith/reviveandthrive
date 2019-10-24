@@ -129,8 +129,11 @@ const updateUser = (req, res) => {
 // Destroy user
 const destroy = (req, res) => {
   db.User.findByIdAndDelete(
-    req.params.id, (err, destroyEvent) =>{
+    req.params.id, 
+    // req.body,
+    (err, destroyEvent) =>{
       if (err) return console.log(error);
+
       res.json({
         status:200,
         count: 1,
@@ -140,8 +143,6 @@ const destroy = (req, res) => {
     }
   )
 }
-
-
 
 
 module.exports = {

@@ -50,4 +50,10 @@ router.get('/admin', (req, res) => {
   });
 });
 
+router.get('/admin/user', (req, res) => {
+  res.sendFile('views/dasboard/admin.html', {
+    root: `${__dirname}/../`
+  });
+});
+
 module.exports = router;
