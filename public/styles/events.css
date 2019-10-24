@@ -17,30 +17,26 @@ main{
   color: white;
 }
 
-.dropdown-toggle::after {
-  display: inline-block;
-  margin-left: .255em;
-  vertical-align: .255em;
-  content: "";
-  border-top: .3em solid;
-  border-right: .3em solid transparent;
-  border-bottom: 0;
-  border-left: .3em solid transparent;
+section{
+  width: 75%;
+  padding: 25px;
+  margin: 0 auto;
+  background-color: rgba(25, 255, 255, 0.4);
 }
 
-.mt-0 {
-  margin-top: 0 !important;
+.card-content{
+  background-color: yellowgreen;
+  margin-bottom: 25px;
+  margin: 10px;
+  padding: 25px;
 }
 
-.ml-1 {
-  margin-left: ($spacer * .25) !important;
+
+span{
+  margin: unset;
+  float: right;
 }
 
-.px-2 {
-  padding-left: ($spacer * .5) !important;
-  padding-right: ($spacer * .5) !important;
-}
-
-.p-3 {
-  padding: $spacer !important;
+.date-container{
+  margin-left: 25px;
 }
