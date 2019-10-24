@@ -5,7 +5,7 @@ const onSuccess = (response) => {
      const template = `
      <tr>
      <td>${event.className}</td>
-     <td>${event.TeacherName}</td>
+     <td>${event.teacherName}</td>
      <td>${event.time}</td>
      <td>${event.location}</td>
      <td>${event.description}</td>
