@@ -4,21 +4,23 @@ onSuccess = (response) => {
  
   response.data.forEach((events) => {
       const template = `
-    <div class="section-info">
-    <span>${events.time}</span>
-          <span class="add"><button type="button" class="btn btn-link">add</button></span>
-          <h5>${events.className}</h5>
-          <p>${events.teacherName}</p> 
-      <section id="details">
-      <button type="button" class="btn btn-link">Click for details</button>
-          <p id="show">${events.description}</p>     
-      </section>
-      </div>
+      <div class="card-content">
+      <h4 class="class-name">${events.className}</h4>
+      <h6>${events.teacherName}</h6>
+      <div>${events.time}</div>
+      <span><button type="button" class="btn btn-link" >Add</button></span>
+      <h5 class="btn btn-link">See Description</h5>
+      <p class="parrafo">${events.description}</p>
+    </div>
     `;
     
-    // $('#post').append(template);
-
+    $('.card-container').append(template);
+    
   })
+  $("p.parrafo").hide();
+  $("h5").click('section', function(){
+    $("p.parrafo").slideToggle();
+  });
 };
 
 onError = () => {
@@ -37,12 +39,11 @@ $.ajax({
 window.onload = clock;
 function clock()
 {
-    var d = new Date();
-    var date = d.getDate();
-    var year = d.getFullYear();
-    var month = d.getMonth();
-    var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+    let d = new Date();
+    let date = d.getDate();
+    let year = d.getFullYear();
+    let month = d.getMonth();
+    let monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
     month = monthArr[month];
     document.getElementById("date").innerHTML= date+" "+month+", "+year;
 }
-
