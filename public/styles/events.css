@@ -1,7 +1,7 @@
-body{
-background-image: url("/assets/letstry.jpg");
-  background-size: contain;
-  background-repeat: repeat;
+body {
+  background-image: url(/assets/letstry.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 main{
@@ -22,14 +22,13 @@ section{
   width: 75%;
   padding: 25px;
   margin: 0 auto;
-  background-color: rgba(25, 255, 255, 0.4);
 }
 
 .card-content{
-  background-color: yellowgreen;
   margin-bottom: 25px;
   margin: 10px;
   padding: 25px;
+  background-color: rgba(0, 128, 70, .4);
 }
 
 
@@ -40,4 +39,35 @@ span{
 
 .date-container{
   margin-left: 25px;
+}
+
+section {
+  width: 75%;
+  padding: 25px;
+  margin: 0 auto;
+  /* background-color: rgba(0, 128, 70, 0.4); */
+}
+
+.btn-link {
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+}
+
+#revive3{
+  color: white !important;
+}
+
+.clearfix{
+  height: 35px;
+}
+
+.icon{
+  padding: 5px;
+  float: right;
+}
+
+span {
+  margin: unset;
+  float: left;
 }
