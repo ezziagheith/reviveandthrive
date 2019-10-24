@@ -9,6 +9,8 @@
     <!--------MAIN CSS--------->
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/account.css">
+        <!-----FONT AWESOME-------->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <!--------JQUERY---------->
     <script defer
     src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -24,74 +26,49 @@
 <body>
     <!--START NAV-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navv">
-        <a class="navbar-brand" id="revive" href="/">Revive and Thrive</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" id="revive" href="/">Revive and Thrive</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+  </button>
         
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                    <div class="account-item">
-                        <a class="account-link" href="#"></a>
-                        </div>
-                </li>
-            <li class="nav-item">
-                    <div class="account-item">
-                        <a class="account-link" href="#"></a>
-                         </div>
-            </li>
-            </ul>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <div class="account-item">
+            <a class="account-link" href="#"></a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <div class="account-item">
+            <a class="account-link" href="#"></a>
+          </div>
+        </li>
+      </ul>
 
-            <div class="account-item">
-                    <a class="account-link" href="/events">Events</a>
-                    </div>
-            <div class="account-item">
-            <a class="account-link" href="#">My Account</a>
-            </div>
+      <div class="account-item">
+        <a class="account-link" href="/events">Events</a>
+      </div>
+      <div class="account-item">
+        <a class="account-link" href="#">My Account</a>
+      </div>
         
-            <button class="btn btn-outline-success my-2 my-sm-0 butt" id="login" type="submit">Log Out</button>
-        </div>
-        </nav>
+        <button class="btn btn-outline-success my-2 my-sm-0 butt" id="login" type="submit">Log Out</button>
+      </div>
+  </nav>
     <!--END NAV---->
 
-    <main role="main" class="container">
-            <div class="d-flex align-items-center p-3 my-3 bg-purple rounded shadow-sm">
+<main role="main" class="container">
+  <div class="d-flex align-items-center p-3 my-3 bg-purple rounded shadow-sm">
+    <div class="lh-100">
+      <h3 class="mb-0 text-white lh-100" id="hello">Hello</h3>
+    </div>
+  </div>
+    <div class="my-3 p-3 bg-white rounded shadow-sm">
+        <h6 id="myClasses" class="border-bottom border-gray pb-2 mb-0">My Classes:</h6>
+              
+    </div>
+  </main>
 
-                    <div class="lh-100">
-                      <h3 class="mb-0 text-white lh-100" id="hello">Hello</h3>
-
-                    </div>
-                  </div>
-          
-            <div class="my-3 p-3 bg-white rounded shadow-sm">
-              <h6 id="myClasses" class="border-bottom border-gray pb-2 mb-0">My Classes:</h6>
-              <!-- <div class="media text-muted pt-3">
-                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#007bff"/><text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text></svg>
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <strong class="d-block text-gray-dark">@username</strong>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                </p>
-              </div>
-              <div class="media text-muted pt-3">
-                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#e83e8c"/><text x="50%" y="50%" fill="#e83e8c" dy=".3em">32x32</text></svg>
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <strong class="d-block text-gray-dark">@username</strong>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                </p>
-              </div>
-              <div class="media text-muted pt-3">
-                <svg class="bd-placeholder-img mr-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 32x32"><title>Placeholder</title><rect width="100%" height="100%" fill="#6f42c1"/><text x="50%" y="50%" fill="#6f42c1" dy=".3em">32x32</text></svg>
-                <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
-                  <strong class="d-block text-gray-dark">@username</strong>
-                  Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                </p>
-              </div>
-              <small class="d-block text-right mt-3">
-                <a href="#">All updates</a>
-              </small> -->
-            </div>
-          </main>
 
     <!--------BOOTSTRAP JS------------->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
