@@ -27,3 +27,18 @@ body{
 .d-flex{
     background-color: #008046;
 }
+
+.shadow-sm {
+    box-shadow: 0 .200rem .200rem rgba(0,128,70,.4)!important;
+}
+
+.rounded {
+    border-radius: 10px 10px!important;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #008046;
+    text-decoration: none;
+}
+

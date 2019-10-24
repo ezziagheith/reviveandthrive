@@ -2,6 +2,7 @@ body{
     background-image: white;
 } 
 
+
 header {
     position: relative;
     background-color: white;
@@ -82,6 +83,7 @@ a{
     padding-right: 200px;
     padding-left: 200px;
     padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .featurette-heading{
@@ -103,15 +105,21 @@ a{
 }
 
 .mission{
-    padding-bottom: 40px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
 
 .izzy{
-    padding-bottom: 40px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
 
 .adonis{
-    padding-bottom: 40px;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
 }
 
 main{
@@ -138,6 +146,10 @@ main{
 .icon{
     padding: 5px;
     float: right;
+}
+
+.pictrial{
+    background-color: white;
 }
 
 /* Sign Up Page*/
