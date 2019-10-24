@@ -107,7 +107,7 @@ const deleteSession = (req, res) => {
 
         res.status(200).json({
             status: 200,
-            message: 'Succes',
+            message: 'Success',
         });
     });
 }
@@ -137,8 +137,6 @@ const showAccount = (req, res) =>{
         });
     });
 };
-
-
 
 
 
