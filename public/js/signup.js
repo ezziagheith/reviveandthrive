@@ -25,8 +25,6 @@ const handleSubmit = (event) => {
   };
 
 
-    console.log('Submitting new user -->', userData);
-
     fetch('api/v1/signup', {
       method: 'POST',
       headers: {

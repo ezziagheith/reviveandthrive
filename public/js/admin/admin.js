@@ -1,5 +1,5 @@
 const onSuccess = (response) => {
-   console.log('success!');
+
  
    response.data.forEach((event) => {
      const template = `
@@ -15,7 +15,7 @@ const onSuccess = (response) => {
    })
  };
  
- const onError = () => {
+ const onError = (err) => {
    console.log('err');
  }
  

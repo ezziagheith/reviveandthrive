@@ -15,10 +15,7 @@ const onSuccess = (res) => {
     $('#myClasses').append(template);
     })
     $('.removeButton').on('click', handleRemoveButton)
-    console.log(res);
 }
-
-
 
   const onError = (err) => {
     console.log(err);

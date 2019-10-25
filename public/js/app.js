@@ -40,12 +40,10 @@ form && form.addEventListener('submit', (event) => {
     })
       .then(dataStream => dataStream.json())
       .then(res => {
-        console.log(res);
         if (res.status === 201) return window.location = `/account/${res.data.id}`;
       })
       .catch(err => console.log(err));
   }
-console.log(userData);
 });
 
 
