@@ -33,7 +33,7 @@ const handleSubmit = (event) => {
           if (res.status === 201) {
             window.sessionStorage.setItem(`userId`, `${res.data.id}`);
             window.sessionStorage.setItem(`firstName`, `${res.data.firstName}`);
-            return window.location.href=`http://localhost:3000/account/${res.data.id}`;
+            return window.location.href=`/account/${res.data.id}`;
         }})
         .catch(err => console.log(err));
     }

@@ -35,7 +35,7 @@ const handleSubmit = (event) => {
       .then(stream => stream.json())
       .then(res =>{
         console.log(res);
-        if(res.status === 201) return  window.location.href="http://localhost:3000/login"
+        if(res.status === 201) return  window.location.href="/login"
     })
       .catch((err) => console.log(err));
   };
