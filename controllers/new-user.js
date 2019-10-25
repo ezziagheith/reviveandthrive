@@ -73,12 +73,11 @@ const createUser = (req, res) => {
 
 
   // Post Login
-
   const createSession = (req, res) => {
     db.User.findOne({email: req.body.email}, (err, foundUser) =>{
         if (err) return res.status(500).json({
             status: 500,
-            error: [{ message: 'Uh oh something went wrong. Please try again'}],
+            error: [{ message: 'Something went wrong. Please try again'}],
         });
   
         if(!foundUser) return res.status(400).json({
@@ -88,7 +87,7 @@ const createUser = (req, res) => {
         bcrypt.compare(req.body.password, foundUser.password, (err, isMatch) => {
             if (err) return res.status(500).json({
                 status: 500,
-                error: [{message: 'Uh oh, something went wrong. Please try again'}],
+                error: [{message: 'Something went wrong. Please try again'}],
             });
   
             if (isMatch) {
@@ -115,7 +114,10 @@ const updateUser = (req, res) => {
     req.params.id,
     req.body,
     {new: true}, (error, updatedUser) => {
-      if (error) return console.log(error);
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
 
       res.json({
         status: 200,
@@ -132,7 +134,10 @@ const destroy = (req, res) => {
     req.params.id, 
     // req.body,
     (err, destroyEvent) =>{
-      if (err) return console.log(error);
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
 
       res.json({
         status:200,
