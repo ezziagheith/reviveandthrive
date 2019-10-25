@@ -12,16 +12,16 @@ const onSuccess = (res) => {
         <div>${event.location}</div>
         <span><button id="${event._id}" type="button" class="btn btn-link removeButton" >Remove</button></span>
       </div>`
-
-
-      $('#myClasses').append(template);
+    $('#myClasses').append(template);
     })
     $('.removeButton').on('click', handleRemoveButton)
     console.log(res);
 }
-const onError = (err) => {
+
+
+
+  const onError = (err) => {
     console.log(err);
-    
 }
 
 
@@ -31,6 +31,7 @@ $.ajax({
     success: onSuccess,
     error: onError
   })
+
 
   const handleRemoveButton = (e) => {
     e.preventDefault();
