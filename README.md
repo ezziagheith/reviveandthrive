@@ -39,10 +39,10 @@ https://reviveandthrive.herokuapp.com/ -automatic
 * Make facebook, twitter, and instagram page for Revive and Thrive and link our page to those pages
 
 ## Wireframes
-![Home Page](/wireframeimages/homepage.png)
-![Sign Up Page](/wireframeimages/work2.png)
-![Log In Page](/wireframeimages/work1.png)
-![Event Page](/wireframeimages/eventpage.png)
-![Account Page](/wireframeimages/accountpage.png)
+![Home Page](/public/assets/wireframeimages/homepage.png)
+![Sign Up Page](public/assets/wireframeimages/work2.png)
+![Log In Page](public/assets/wireframeimages/work1.png)
+![Event Page](public/assets/wireframeimages/eventpage.png)
+![Account Page](public/assets/wireframeimages/account.png)
 
 
