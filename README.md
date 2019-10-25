@@ -12,3 +12,6 @@
     * After adding their desired class/classes, the user can go back to their account page and see a list of all the classes they added
     * If they change their mind and wish to remove a class, they can do so from the account page. 
 
+## Wireframes
+![Home Page](/wireframeimages/homepage.png)
+
