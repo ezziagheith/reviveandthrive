@@ -20,6 +20,3 @@
 ![Account Page](/wireframeimages/accountpage.png)
 
 
-### Technologies Used
-
-### testing
