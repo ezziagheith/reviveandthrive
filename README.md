@@ -14,10 +14,12 @@
 
 ## Wireframes
 ![Home Page](/wireframeimages/homepage.png)
-![Sign Up Page](/wireframeimages/signup1.png)
+![Sign Up Page](/wireframeimages/signupq.png)
 ![Log In Page](/wireframeimages/login.png)
 ![Event Page](/wireframeimages/eventpage.png)
 ![Account Page](/wireframeimages/accountpage.png)
 
 
 ### Technologies Used
+
+### testing
