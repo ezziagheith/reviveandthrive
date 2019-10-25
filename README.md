@@ -16,5 +16,5 @@
 ![Home Page](/wireframeimages/homepage.png)
 ![Sign Up Page](/wireframeimages/signup1.png)
 ![Log In Page](/wireframeimages/login.png)
-![Event Page](/wireframeimages/login.png)
+![Event Page](/wireframeimages/eventpage.png)
 ![Account Page](/wireframeimages/accountpage.png)
