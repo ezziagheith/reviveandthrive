@@ -57,7 +57,6 @@ const addEvent = (req,res) => {
 
 const destroy = (req, res) =>{
   db.User.findById(req.session.currentUser, (err, foundUser)=>{
-    console.log(req.params.id);
     if(err) return res.status(500).json({
       status: 500,
       error: [{message: 'Uh oh, something went wrong. Please try again'}],

@@ -1,12 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-
+require('dotenv').config();
 // Server Port 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 
 // Server App
 const app = express();
+
 
 
 const routes = require('./routes');

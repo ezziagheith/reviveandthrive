@@ -54,7 +54,10 @@ const createEvent = (req, res) => {
       req.params.id,
       req.body,
       {new: true}, (error, updatedEvent) => {
-        if (error) return console.log(error);
+        if (err)  return res.status(500).json({
+          status: 500,
+          error: [{message: 'Something went wrong! Please try again'}],
+        });
   
         res.json({
           status: 200,
@@ -70,7 +73,10 @@ const createEvent = (req, res) => {
 const destroy = (req, res) => {
   db.Event.findByIdAndDelete(
     req.params.id, (err, destroyEvent) =>{
-      if (err) return console.log(error);
+      if (err)  return res.status(500).json({
+        status: 500,
+        error: [{message: 'Something went wrong! Please try again'}],
+      });
       res.json({
         status:200,
         count: 1,
