@@ -53,14 +53,14 @@ form && form.addEventListener('submit', (event) => {
 
 $('#signup').on('click', function (event){
     event.preventDefault()
-    window.location.href="http://localhost:3000/signup"
+    window.location.href="/signup"
 });
 
 // NOTE Handling Login Button
 
 $('#login').on('click', function (event){
     event.preventDefault()
-    window.location.href="http://localhost:3000/login"
+    window.location.href="/login"
 });
 
 

@@ -33,7 +33,7 @@ const onError = (err) => {
 
 $.ajax({
   method: "GET",
-  url: "http://localhost:3000/api/v1/events",
+  url: "/api/v1/events",
   success: onSuccess,
   error: onError
 })
