@@ -12,6 +12,32 @@
     * After adding their desired class/classes, the user can go back to their account page and see a list of all the classes they added
     * If they change their mind and wish to remove a class, they can do so from the account page. 
 
+## Links
+
+https://reviveandthrive.herokuapp.com/ -automatic
+
+## Technologies Used
+
+* Node
+* Bootstrap
+* MongoDB
+* Mongoose
+* Express
+* Javascript
+* CSS 
+
+## Existing Features
+* Sign Up
+* Log in
+* Add Events to profile
+* Remove event(s) from account page
+
+## Planned Features
+* Make it mobile friendly
+* Add healthy meal recipes 
+* Add a button to add the recipes to account page
+* Make facebook, twitter, and instagram page for Revive and Thrive and link our page to those pages
+
 ## Wireframes
 ![Home Page](/wireframeimages/homepage.png)
 ![Sign Up Page](/wireframeimages/work2.png)
