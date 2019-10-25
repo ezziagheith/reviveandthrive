@@ -14,8 +14,8 @@
 
 ## Wireframes
 ![Home Page](/wireframeimages/homepage.png)
-![Sign Up Page](/wireframeimages/finalsignup.png)
-![Log In Page](/wireframeimages/finallogin.png)
+![Sign Up Page](/wireframeimages/work2.png)
+![Log In Page](/wireframeimages/work1.png)
 ![Event Page](/wireframeimages/eventpage.png)
 ![Account Page](/wireframeimages/accountpage.png)
 
