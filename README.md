@@ -1,6 +1,6 @@
 # Revive And Thrive
 
-##### Revive and Thrive allows users to find and schedule workouts that fits well with their schedule. These workouts will include different types of workouts in the San Francisco Bay Area.
+#### Revive and Thrive allows users to find and schedule workouts that fits well with their schedule. These workouts will include different types of workouts in the San Francisco Bay Area.
 
 
 * From the Home Page:
