@@ -1,5 +1,6 @@
+require('dotenv').config();
 const mongoose = require("mongoose");
-const DB_URL = "mongodb://localhost: 27017/reviveandthrive";
+const DB_URL = process.env.MONGODB_URI;
 
 
 mongoose.connect(DB_URL, {
