@@ -91,12 +91,12 @@ span {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: rgba(0, 128, 70, 0.4);
+  background-color: rgba(161, 114, 101, 0.4);
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 20%; /* Could be more or less, depending on screen size */
-  color: white;
+  color: black;
 }
 
 
