@@ -1,5 +1,4 @@
 const onSuccess = (response) => {
-  console.log('success!');
 
   response.data.forEach((user) => {
     const template = `
@@ -13,7 +12,7 @@ const onSuccess = (response) => {
   })
 };
 
-const onError = () => {
+const onError = (err) => {
   console.log('err');
 }
 
