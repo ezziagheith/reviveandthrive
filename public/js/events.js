@@ -26,7 +26,7 @@ const onSuccess = (response) => {
 
 
 
-const onError = () => {
+const onError = (err) => {
   console.log('err');
 }
 
@@ -78,7 +78,7 @@ window.onclick = function(event) {
       console.log('added', id);
       $.ajax({
         method: "PUT",
-        url: `http://localhost:3000/api/v1/users/${window.sessionStorage.userId}/addevent`,
+        url: `/api/v1/users/${window.sessionStorage.userId}/addevent`,
         data: {event: id},
         success: (res)=>{console.log(res)},
         error: onError
