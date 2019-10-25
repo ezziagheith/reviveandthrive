@@ -18,3 +18,6 @@
 ![Log In Page](/wireframeimages/login.png)
 ![Event Page](/wireframeimages/eventpage.png)
 ![Account Page](/wireframeimages/accountpage.png)
+
+
+### Technologies Used
